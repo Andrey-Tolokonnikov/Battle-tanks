@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="tanks:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/tanks_jar</output-path>
+    <root id="archive" name="tanks.jar">
+      <element id="module-output" name="tanks" />
+      <element id="extracted-dir" path="P:/javafx-sdk-21.0.1/lib/javafx-swt.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="P:/javafx-sdk-21.0.1/lib/javafx.web.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="P:/javafx-sdk-21.0.1/lib/javafx.base.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="P:/javafx-sdk-21.0.1/lib/javafx.fxml.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="P:/javafx-sdk-21.0.1/lib/javafx.media.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="P:/javafx-sdk-21.0.1/lib/javafx.swing.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="P:/javafx-sdk-21.0.1/lib/javafx.controls.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="P:/javafx-sdk-21.0.1/lib/javafx.graphics.jar" path-in-jar="/" />
+      <element id="library" level="project" name="src" />
+    </root>
+  </artifact>
+</component>

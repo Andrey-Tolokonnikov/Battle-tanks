@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<!--
+<GridPane maxHeight="700.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="1100.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="editor.Runner">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="800.0" minWidth="800.0" prefWidth="800.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="246.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="592.0" minHeight="592.0" prefHeight="592.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <GridPane GridPane.columnIndex="1" GridPane.rowSpan="2">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="93.4" minHeight="10.0" prefHeight="58.40000381469727" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="146.39999618530274" minHeight="10.0" prefHeight="138.39999618530274" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Choose the tile" textFill="#ff691e" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+                  <GridPane gridLinesVisible="true" GridPane.rowIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ToggleButton maxWidth="45.0" mnemonicParsing="false" onAction="#toggleButton1Click" prefHeight="40.0" selected="true" style="-fx-background-size: 75%; -fx-background-image: url(&quot;file:/C:/Users/Andrey/IdeaProjects/EditorFX/src/app/images/brick.png&quot;); -fx-background-repeat: no-repeat; -fx-border-width: 5px; -fx-background-position: center;" styleClass="image-button" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="Tile" />
+                           </toggleGroup>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ToggleButton>
+                        <ToggleButton layoutX="61.0" layoutY="13.0" maxWidth="45.0" mnemonicParsing="false" onAction="#toggleButton2Click" prefHeight="40.0" style="-fx-background-size: 75%; -fx-background-image: url(&quot;file:/C:/Users/Andrey/IdeaProjects/EditorFX/src/app/images/steel.png&quot;); -fx-background-repeat: no-repeat; -fx-border-width: 5px; -fx-background-position: center;" styleClass="image-button" toggleGroup="$Tile" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ToggleButton>
+                        <ToggleButton layoutX="10.0" layoutY="13.0" maxWidth="45.0" mnemonicParsing="false" onAction="#toggleButton3Click" prefHeight="40.0" style="-fx-background-size: 75%; -fx-background-image: url(&quot;file:/C:/Users/Andrey/IdeaProjects/EditorFX/src/app/images/water.png&quot;); -fx-background-repeat: no-repeat; -fx-border-width: 5px; -fx-background-position: center;" styleClass="image-button" toggleGroup="$Tile" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ToggleButton>
+                        <ToggleButton layoutX="10.0" layoutY="13.0" maxWidth="45.0" mnemonicParsing="false" onAction="#toggleButton4Click" prefHeight="40.0" style="-fx-background-size: 75%; -fx-background-image: url(&quot;file:/C:/Users/Andrey/IdeaProjects/EditorFX/src/app/images/grass.png&quot;); -fx-background-repeat: no-repeat; -fx-border-width: 5px; -fx-background-position: center;" styleClass="image-button" toggleGroup="$Tile" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ToggleButton>
+                        <ToggleButton layoutX="10.0" layoutY="13.0" maxWidth="45.0" mnemonicParsing="false" onAction="#toggleButton5Click" prefHeight="40.0" style="-fx-background-size: 75%; -fx-background-image: url(&quot;file:/C:/Users/Andrey/IdeaProjects/EditorFX/src/app/images/ice.png&quot;); -fx-background-repeat: no-repeat; -fx-border-width: 5px; -fx-background-position: center;" styleClass="image-button" toggleGroup="$Tile" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ToggleButton>
+                        <ToggleButton layoutX="61.0" layoutY="13.0" maxWidth="45.0" mnemonicParsing="false" onAction="#toggleButton6Click" prefHeight="40.0" style="-fx-background-size: 75%; -fx-background-image: url(&quot;file:/C:/Users/Andrey/IdeaProjects/EditorFX/src/app/images/empty.png&quot;); -fx-background-repeat: no-repeat; -fx-border-width: 2px; -fx-border-color: white; -fx-background-position: center;" styleClass="image-button" toggleGroup="$Tile" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ToggleButton>
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+            <GridPane layoutX="10.0" layoutY="10.0" GridPane.rowIndex="1">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="93.4" minHeight="10.0" prefHeight="58.40000381469727" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="146.39999618530274" minHeight="10.0" prefHeight="138.39999618530274" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="Choose the entity" textFill="#ff691e" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+                  <GridPane gridLinesVisible="true" style="colo: white;" GridPane.rowIndex="1">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ToggleButton maxWidth="45.0" mnemonicParsing="false" onAction="#toggleButton7Click" prefHeight="40.0" style="-fx-background-size: 75%; -fx-background-image: url(&quot;file:/C:/Users/Andrey/IdeaProjects/EditorFX/src/app/images/player.png&quot;); -fx-background-repeat: no-repeat; -fx-border-width: 5px; -fx-background-position: center;" styleClass="image-button" toggleGroup="$Tile" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ToggleButton>
+                        <ToggleButton layoutX="61.0" layoutY="13.0" maxWidth="45.0" mnemonicParsing="false" onAction="#toggleButton8Click" prefHeight="40.0" style="-fx-background-size: 75%; -fx-background-image: url(&quot;file:/C:/Users/Andrey/IdeaProjects/EditorFX/src/app/images/hard.png&quot;); -fx-background-repeat: no-repeat; -fx-border-width: 5px; -fx-background-position: center;" styleClass="image-button" toggleGroup="$Tile" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ToggleButton>
+                        <ToggleButton layoutX="10.0" layoutY="13.0" maxWidth="45.0" mnemonicParsing="false" onAction="#toggleButton9Click" prefHeight="40.0" style="-fx-background-size: 75%; -fx-background-image: url(&quot;file:/C:/Users/Andrey/IdeaProjects/EditorFX/src/app/images/fast.png&quot;); -fx-background-repeat: no-repeat; -fx-border-width: 5px; -fx-background-position: center;" styleClass="image-button" toggleGroup="$Tile" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ToggleButton>
+                        <ToggleButton layoutX="10.0" layoutY="13.0" maxWidth="45.0" mnemonicParsing="false" onAction="#toggleButton10Click" prefHeight="40.0" style="-fx-background-size: 75%; -fx-background-image: url(&quot;file:/C:/Users/Andrey/IdeaProjects/EditorFX/src/app/images/enemy.png&quot;); -fx-background-repeat: no-repeat; -fx-border-width: 5px; -fx-background-position: center;" styleClass="image-button" toggleGroup="$Tile" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ToggleButton>
+                        <ToggleButton layoutX="10.0" layoutY="13.0" maxWidth="45.0" mnemonicParsing="false" onAction="#toggleButton11Click" prefHeight="40.0" style="-fx-background-size: 75%; -fx-background-image: url(&quot;file:/C:/Users/Andrey/IdeaProjects/EditorFX/src/app/images/eagle.png&quot;); -fx-background-repeat: no-repeat; -fx-border-width: 5px; -fx-background-position: center;" styleClass="image-button" toggleGroup="$Tile" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ToggleButton>
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+            <SplitPane dividerPositions="0.2629427792915532" prefHeight="160.0" prefWidth="200.0" GridPane.rowIndex="2">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+              </items>
+            </SplitPane>
+         </children>
+      </GridPane>
+      <Canvas fx:id="canvas" height="592.0" width="800.0" GridPane.rowIndex="1" />
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#loadFile" text="Open" />
+                <MenuItem mnemonicParsing="false" onAction="#exportFile" text="Save as..." />
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#clearLevel" text="Clear all" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</GridPane>
+-->
+<GridPane prefHeight="622.0" prefWidth="1100.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tanks.Runner">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="800.0" minWidth="800.0" prefWidth="800.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="246.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="592.0" minHeight="592.0" prefHeight="592.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <SplitPane dividerPositions="0.75" prefHeight="160.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+            <items>
+                <ScrollPane minWidth="300.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                    <content>
+                        <Canvas fx:id="canvas" height="592.0" width="800.0" />
+                    </content>
+                </ScrollPane>
+                <ScrollPane minWidth="100.0" style="-fx-background-color: #000000;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <content>
+                        <TabPane fx:id="pane" tabClosingPolicy="UNAVAILABLE">
+                            <Tab text="Tiles">
+                                <VBox minWidth="150" prefHeight="500.0">
+                                    <TitledPane animated="false" expanded="false" prefWidth="250" text="Landscape">
+                                        <content>
+                                            <GridPane alignment="CENTER">
+                                                <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                </columnConstraints>
+                                                <rowConstraints>
+                                                    <RowConstraints maxHeight="93.4" minHeight="10.0" prefHeight="58.40000381469727" vgrow="SOMETIMES" />
+                                                    <RowConstraints maxHeight="146.39999618530274" minHeight="10.0" prefHeight="138.39999618530274" vgrow="SOMETIMES" />
+                                                </rowConstraints>
+                                                <children>
+                                                    <GridPane gridLinesVisible="true" GridPane.rowIndex="1">
+                                                        <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        </rowConstraints>
+                                                        <children>
+                                                            <ToggleButton maxWidth="45.0" mnemonicParsing="false" onAction="#toggleButton1Click" prefHeight="40.0" selected="true" style="-fx-background-size: 75%; -fx-background-image: url(&quot;file:/C:/Users/Andrey/IdeaProjects/EditorFX/src/app/images/brick.png&quot;); -fx-background-repeat: no-repeat; -fx-border-width: 5px; -fx-background-position: center;" styleClass="image-button" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                                                <toggleGroup>
+                                                                    <ToggleGroup fx:id="Tile" />
+                                                                </toggleGroup>
+                                                                <cursor>
+                                                                    <Cursor fx:constant="HAND" />
+                                                                </cursor>
+                                                            </ToggleButton>
+                                                            <ToggleButton layoutX="61.0" layoutY="13.0" maxWidth="45.0" mnemonicParsing="false" onAction="#toggleButton2Click" prefHeight="40.0" style="-fx-background-size: 75%; -fx-background-image: url(&quot;file:/C:/Users/Andrey/IdeaProjects/EditorFX/src/app/images/steel.png&quot;); -fx-background-repeat: no-repeat; -fx-border-width: 5px; -fx-background-position: center;" styleClass="image-button" toggleGroup="$Tile" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                                                <cursor>
+                                                                    <Cursor fx:constant="HAND" />
+                                                                </cursor>
+                                                            </ToggleButton>
+                                                            <ToggleButton layoutX="10.0" layoutY="13.0" maxWidth="45.0" mnemonicParsing="false" onAction="#toggleButton3Click" prefHeight="40.0" style="-fx-background-size: 75%; -fx-background-image: url(&quot;file:/C:/Users/Andrey/IdeaProjects/EditorFX/src/app/images/water.png&quot;); -fx-background-repeat: no-repeat; -fx-border-width: 5px; -fx-background-position: center;" styleClass="image-button" toggleGroup="$Tile" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                                <cursor>
+                                                                    <Cursor fx:constant="HAND" />
+                                                                </cursor>
+                                                            </ToggleButton>
+                                                            <ToggleButton layoutX="10.0" layoutY="13.0" maxWidth="45.0" mnemonicParsing="false" onAction="#toggleButton4Click" prefHeight="40.0" style="-fx-background-size: 75%; -fx-background-image: url(&quot;file:/C:/Users/Andrey/IdeaProjects/EditorFX/src/app/images/grass.png&quot;); -fx-background-repeat: no-repeat; -fx-border-width: 5px; -fx-background-position: center;" styleClass="image-button" toggleGroup="$Tile" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                                <cursor>
+                                                                    <Cursor fx:constant="HAND" />
+                                                                </cursor>
+                                                            </ToggleButton>
+                                                            <ToggleButton layoutX="10.0" layoutY="13.0" maxWidth="45.0" mnemonicParsing="false" onAction="#toggleButton5Click" prefHeight="40.0" style="-fx-background-size: 75%; -fx-background-image: url(&quot;file:/C:/Users/Andrey/IdeaProjects/EditorFX/src/app/images/ice.png&quot;); -fx-background-repeat: no-repeat; -fx-border-width: 5px; -fx-background-position: center;" styleClass="image-button" toggleGroup="$Tile" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                                <cursor>
+                                                                    <Cursor fx:constant="HAND" />
+                                                                </cursor>
+                                                            </ToggleButton>
+                                                            <ToggleButton layoutX="61.0" layoutY="13.0" maxWidth="45.0" mnemonicParsing="false" onAction="#toggleButton6Click" prefHeight="40.0" style="-fx-background-size: 75%; -fx-background-image: url(&quot;file:/C:/Users/Andrey/IdeaProjects/EditorFX/src/app/images/empty.png&quot;); -fx-background-repeat: no-repeat; -fx-border-width: 2px; -fx-border-color: white; -fx-background-position: center;" styleClass="image-button" toggleGroup="$Tile" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                                <cursor>
+                                                                    <Cursor fx:constant="HAND" />
+                                                                </cursor>
+                                                            </ToggleButton>
+                                                        </children>
+                                                    </GridPane>
+                                                    <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                        <children>
+                                                            <Label text="Choose the tile" textFill="#ff691e">
+                                                                <font>
+                                                                    <Font size="27.0" />
+                                                                </font>
+                                                            </Label>
+                                                        </children>
+                                                    </HBox>
+                                                </children>
+                                            </GridPane>
+                                        </content>
+                                    </TitledPane>
+                                    <TitledPane animated="false" expanded="false" text="Entities">
+                                        <content>
+                                            <GridPane layoutX="10.0" layoutY="10.0" GridPane.rowIndex="1">
+                                                <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                </columnConstraints>
+                                                <rowConstraints>
+                                                    <RowConstraints maxHeight="93.4" minHeight="10.0" prefHeight="58.40000381469727" vgrow="SOMETIMES" />
+                                                    <RowConstraints maxHeight="146.39999618530274" minHeight="10.0" prefHeight="138.39999618530274" vgrow="SOMETIMES" />
+                                                </rowConstraints>
+                                                <children>
+                                                    <GridPane gridLinesVisible="true" style="colo: white;" GridPane.rowIndex="1">
+                                                        <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        </rowConstraints>
+                                                        <children>
+                                                            <ToggleButton maxWidth="45.0" mnemonicParsing="false" onAction="#toggleButton7Click" prefHeight="40.0" style="-fx-background-size: 75%; -fx-background-image: url(&quot;file:/C:/Users/Andrey/IdeaProjects/EditorFX/src/app/images/player.png&quot;); -fx-background-repeat: no-repeat; -fx-border-width: 5px; -fx-background-position: center;" styleClass="image-button" toggleGroup="$Tile" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                                                <cursor>
+                                                                    <Cursor fx:constant="HAND" />
+                                                                </cursor>
+                                                            </ToggleButton>
+                                                            <ToggleButton layoutX="61.0" layoutY="13.0" maxWidth="45.0" mnemonicParsing="false" onAction="#toggleButton8Click" prefHeight="40.0" style="-fx-background-size: 75%; -fx-background-image: url(&quot;file:/C:/Users/Andrey/IdeaProjects/EditorFX/src/app/images/hard.png&quot;); -fx-background-repeat: no-repeat; -fx-border-width: 5px; -fx-background-position: center;" styleClass="image-button" toggleGroup="$Tile" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                                                <cursor>
+                                                                    <Cursor fx:constant="HAND" />
+                                                                </cursor>
+                                                            </ToggleButton>
+                                                            <ToggleButton layoutX="10.0" layoutY="13.0" maxWidth="45.0" mnemonicParsing="false" onAction="#toggleButton9Click" prefHeight="40.0" style="-fx-background-size: 75%; -fx-background-image: url(&quot;file:/C:/Users/Andrey/IdeaProjects/EditorFX/src/app/images/fast.png&quot;); -fx-background-repeat: no-repeat; -fx-border-width: 5px; -fx-background-position: center;" styleClass="image-button" toggleGroup="$Tile" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                                <cursor>
+                                                                    <Cursor fx:constant="HAND" />
+                                                                </cursor>
+                                                            </ToggleButton>
+                                                            <ToggleButton layoutX="10.0" layoutY="13.0" maxWidth="45.0" mnemonicParsing="false" onAction="#toggleButton10Click" prefHeight="40.0" style="-fx-background-size: 75%; -fx-background-image: url(&quot;file:/C:/Users/Andrey/IdeaProjects/EditorFX/src/app/images/enemy.png&quot;); -fx-background-repeat: no-repeat; -fx-border-width: 5px; -fx-background-position: center;" styleClass="image-button" toggleGroup="$Tile" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                                <cursor>
+                                                                    <Cursor fx:constant="HAND" />
+                                                                </cursor>
+                                                            </ToggleButton>
+                                                            <ToggleButton layoutX="10.0" layoutY="13.0" maxWidth="45.0" mnemonicParsing="false" onAction="#toggleButton11Click" prefHeight="40.0" style="-fx-background-size: 75%; -fx-background-image: url(&quot;file:/C:/Users/Andrey/IdeaProjects/EditorFX/src/app/images/eagle.png&quot;); -fx-background-repeat: no-repeat; -fx-border-width: 5px; -fx-background-position: center;" styleClass="image-button" toggleGroup="$Tile" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                                <cursor>
+                                                                    <Cursor fx:constant="HAND" />
+                                                                </cursor>
+                                                            </ToggleButton>
+                                                        </children>
+                                                    </GridPane>
+                                                    <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                        <children>
+                                                            <Label text="Choose the entity" textFill="#ff691e">
+                                                                <font>
+                                                                    <Font size="27.0" />
+                                                                </font>
+                                                            </Label>
+                                                        </children>
+                                                    </HBox>
+                                                </children>
+                                            </GridPane>
+                                        </content>
+                                    </TitledPane>
+                                </VBox>
+                            </Tab>
+
+                            <Tab text="Presets">
+                                
+                                <TitledPane animated="false" layoutX="10.0" layoutY="254.0" text="Settings">
+                                    <GridPane layoutX="10.0" layoutY="10.0" GridPane.rowIndex="1">
+                                        <columnConstraints>
+                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        </columnConstraints>
+                                        <rowConstraints>
+                                            <RowConstraints maxHeight="93.4" minHeight="10.0" prefHeight="58.40000381469727" vgrow="SOMETIMES" />
+                                            <RowConstraints maxHeight="146.39999618530274" minHeight="10.0" prefHeight="138.39999618530274" vgrow="SOMETIMES" />
+                                 <RowConstraints maxHeight="93.0" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+                                 <RowConstraints maxHeight="93.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 <RowConstraints maxHeight="93.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        </rowConstraints>
+                                        <children>
+                                            <GridPane gridLinesVisible="true" prefHeight="138.0" prefWidth="113.0" style="colo: white;" GridPane.rowIndex="1">
+                                                <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                </columnConstraints>
+                                                <rowConstraints>
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                </rowConstraints>
+                                                <children>
+                                       <Label alignment="CENTER" text="      Level number" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                    <CheckBox fx:id="sounds" mnemonicParsing="false" text="Enable sounds" />
+                                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                                                        <HBox alignment="CENTER">
+                                                        <Label alignment="CENTER" text="Music volume" />
+                                                        </HBox>
+                                                        <Slider fx:id="music" blockIncrement="0.05" max="1.0" />
+
+                                                    </VBox>
+                                                    <Spinner fx:id="levelNum" editable="true" initialValue="1" GridPane.rowIndex="1" />
+                                                    <Button mnemonicParsing="false" onAction="#BackClick" text="Back to menu" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+
+                                                </children>
+                                            </GridPane>
+                                            <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                <children>
+                                                    <Label text="Settings" textFill="#ff691e">
+                                                        <font>
+                                                            <Font size="27.0" />
+                                                        </font>
+                                                    </Label>
+                                                </children>
+                                            </HBox>
+                                 <ColorPicker fx:id="background" GridPane.rowIndex="3" />
+                                 <Label text="Editor background" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                                    <font>
+                                       <Font size="18.0" />
+                                    </font>
+                                 </Label>
+                                 <Button mnemonicParsing="false" onAction="#changeBG" text="Apply" GridPane.rowIndex="4" />
+                                        </children>
+                                    </GridPane>
+                                </TitledPane>
+                            </Tab>
+                        </TabPane>
+                    </content>
+                </ScrollPane>
+            </items>
+        </SplitPane>
+        <MenuBar>
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#loadFile" text="Open" />
+                        <MenuItem mnemonicParsing="false" onAction="#exportFile" text="Save as..." />
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#clearLevel" text="Clear all" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#showAbout" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </children>
+</GridPane>
